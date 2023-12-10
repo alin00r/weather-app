@@ -2,8 +2,9 @@ const hbs = require("hbs");
 const path = require("path");
 const express = require("express");
 const forcast = require("./utils/forcast");
-const geocode = require("./utils/geocode");
-
+require("dotenv").config();
+// const geocode = require("./utils/geocode");
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Define paths for Express config
@@ -78,6 +79,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server is up om port 3000.");
 });

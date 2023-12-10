@@ -4,7 +4,9 @@ const forcast = (address, callback) => {
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     address +
-    "&appid=454d5c532d2873979518ed8bb48a999f&units=metric";
+    "&appid=" +
+    process.env.APPID +
+    "&units=metric";
 
   request({ url, json: true }, (error, { body }) => {
     if (error) {
