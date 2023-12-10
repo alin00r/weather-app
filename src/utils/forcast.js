@@ -15,8 +15,7 @@ const forcast = (address, callback) => {
       callback("Unable to find location,Try another  search.", undefined);
     } else {
       callback(undefined, {
-        Forcast: `${body.weather[0].description} , It is Currently ${body.main.temp} degress outside. `,
-        // The Max_temp is ${body.main.temp_max} & The Min_temp is ${body.main.temp_min}`,
+        Forcast: `${body.weather[0].description}, It is Currently ${body.main.temp} degress outside, This High today is ${body.main.temp_max} with a low of ${body.main.temp_min}.`,
         address: `${body.name},${body.sys.country}`,
       });
     }
