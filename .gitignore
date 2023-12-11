@@ -3,4 +3,4 @@ node_modules
 puplic/img/2.png
 puplic/img/3.png
 puplic/img/wallpaper.png
-.env
+/.env
